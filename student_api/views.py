@@ -267,7 +267,7 @@ class StudentMVS(ModelViewSet):
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
     pagination_class=CustomPageNumberPagination
-    permission_classes=[IsAuthenticatedOrReadOnly]
+    permission_classes=[IsAdminUser]
     # pagination_class=CustomLimitOffsetPagination
     # pagination_class=CustomCursorPagination
     filter_backends=[DjangoFilterBackend,SearchFilter,OrderingFilter]
